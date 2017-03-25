@@ -12,7 +12,7 @@ Zoan::Zoan(string nombre, int tipo, string animal) : FrutaDiablo(nombre) {
 Zoan::~Zoan() {}
 
 void Zoan::escribir(ofstream& file) {
-	static_cast<FrutaDiablo*>(this) -> escribir(file);
+	FrutaDiablo::escribir(file);
 	file << "\nTIPO: ";
 	file << s_tipo[tipo];
 	file << "\nANIMAL: ";

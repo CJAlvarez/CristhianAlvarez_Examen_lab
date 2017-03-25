@@ -18,7 +18,7 @@ class Marina : public Ser {
 
 		~Marina();
 
-		virtual void escribir(ofstream&);
+		void escribir(ofstream&);
 		string getFecha();
 };
 #endif

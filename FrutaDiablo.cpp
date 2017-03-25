@@ -14,3 +14,7 @@ void FrutaDiablo::escribir(ofstream& file) {
 	file << "NOMBRE FRUTA: ";
 	file << nombre;
 }
+
+string FrutaDiablo::getNombre() {
+	return nombre;
+}

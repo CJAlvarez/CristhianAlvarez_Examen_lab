@@ -11,7 +11,8 @@ Paramecia::Paramecia(string nombre, string descripcion) : FrutaDiablo(nombre) {
 Paramecia::~Paramecia() {}
 
 void Paramecia::escribir(ofstream& file) {
-	static_cast<FrutaDiablo*>(this) -> escribir(file);
+	
+	FrutaDiablo::escribir(file);
 	file << "\nDESCRIPCION: ";
 	file << descripcion;
 }

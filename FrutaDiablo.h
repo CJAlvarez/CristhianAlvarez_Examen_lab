@@ -2,8 +2,6 @@
 #ifndef FRUTADIABLO_H
 #define FRUTADIABLO_H
 
-#define TRUE true
-#define FALSE false
 
 #include <exception>
 #include <iostream>
@@ -27,6 +25,6 @@ public:
 	~FrutaDiablo();
 
 	virtual void escribir(ofstream&);
-	
+	string getNombre();	
 };
 #endif

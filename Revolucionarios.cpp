@@ -17,7 +17,7 @@ Revolucionarios::Revolucionarios(string nombre, int edad, int rasa, FrutaDiablo*
 }
 
 Revolucionarios::Revolucionarios(string nombre, int edad, int rasa, bool h_Observacion, bool h_Armadura, bool h_Rey) 
- : Ser(nombre, edad, rasa, fruta, h_Observacion, h_Armadura, h_Rey) { 	
+ : Ser(nombre, edad, rasa, h_Observacion, h_Armadura, h_Rey) { 	
 	// ESCRIBIR
 	string path = nombre;
 	path.append(".log");
@@ -34,7 +34,7 @@ Revolucionarios::~Revolucionarios() {
 }
 
 void Revolucionarios::escribir(ofstream& file) {
-	static_cast<Ser*>(this) -> escribir(file);
+	Ser::escribir(file);
 	file << "\nFECHA INGRESO: ";
 	file << getFecha();
 }

@@ -1,10 +1,10 @@
 main.exe: main.o Ser.o Marina.o Piratas.o Revolucionarios.o FrutaDiablo.o Paramecia.o Zoan.o Logia.o
 	g++ main.o Ser.o Marina.o Piratas.o Revolucionarios.o FrutaDiablo.o Paramecia.o Zoan.o Logia.o -o run -std=c++0x
 
-main.o: main.cpp Ser.o
+main.o: main.cpp Ser.h Marina.h Piratas.h Revolucionarios.h FrutaDiablo.h Paramecia.h Zoan.h Logia.h
 	g++ main.cpp -c -std=c++0x
 
-Ser.o: Ser.h Ser.cpp
+Ser.o: Ser.h Ser.cpp FrutaDiablo.h
 	g++ Ser.cpp -c -std=c++0x
 
 Marina.o: Marina.h Marina.cpp Ser.h

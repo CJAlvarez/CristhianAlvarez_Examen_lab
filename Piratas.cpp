@@ -23,7 +23,7 @@ Piratas::Piratas(string nombre, int edad, int rasa, FrutaDiablo* fruta, bool h_O
 }
 
 Piratas::Piratas(string nombre, int edad, int rasa, bool h_Observacion, bool h_Armadura, bool h_Rey, int oceano, string tripulacion, string funcion) 
-: Ser(nombre, edad, rasa, fruta, h_Observacion, h_Armadura, h_Rey) {
+: Ser(nombre, edad, rasa, h_Observacion, h_Armadura, h_Rey) {
  	this -> oceano = oceano;
 	this -> tripulacion = tripulacion;
 	this -> funcion = funcion;
@@ -44,7 +44,7 @@ Piratas::~Piratas() {
 }
 
 void Piratas::escribir(ofstream& file) {
-	static_cast<Ser*>(this) -> escribir(file);
+	Ser::escribir(file);
 	file << "\nOCEANO: ";
 	file << s_oceano[oceano];
 	file << "\nTRIPULACION: ";

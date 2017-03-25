@@ -12,22 +12,22 @@ Marina::Marina(string nombre, int edad, int rasa, FrutaDiablo* fruta, bool h_Obs
 	string path = nombre;
 	path.append(".log");
 	const char* ruta = path.c_str();
-	ofstream file;
-	file.open(ruta);
-	escribir(file);
+	ofstream file;	
+	file.open(ruta);		
+	escribir(file);		
 	file.close();
 }
 
 Marina::Marina(string nombre, int edad, int rasa, bool h_Observacion, bool h_Armadura, bool h_Rey, int rango) 
- : Ser(nombre, edad, rasa, fruta, h_Observacion, h_Armadura, h_Rey) {
+ : Ser(nombre, edad, rasa, h_Observacion, h_Armadura, h_Rey) {
  	this -> rango = rango;
 	// ESCRIBIR
 	string path = nombre;
 	path.append(".log");
 	const char* ruta = path.c_str();
-	ofstream file;
-	file.open(ruta);
-	escribir(file);
+	ofstream file;	
+	file.open(ruta);		
+	escribir(file);		
 	file.close();
 }
 
@@ -37,7 +37,7 @@ Marina::~Marina() {
 }
 
 void Marina::escribir(ofstream& file) {
-	static_cast<Ser*>(this) -> escribir(file);
+	Ser::escribir(file);		
 	file << "\nFECHA INGRESO: ";
 	file << getFecha();
 	file << "\nRANGO: ";
